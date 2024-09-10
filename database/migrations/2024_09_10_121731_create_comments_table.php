@@ -11,19 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('post', function (Blueprint $table){
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->unsignedBigInteger('post_id'); // Pastikan tipe ini sesuai dengan kolom id di tabel post
+            $table->string('author');
             $table->text('content');
             $table->timestamps();
+
+            // Definisikan foreign key dengan benar
+            $table->foreign('post_id')->references('id')->on('post')->onDelete('cascade');
         });
     }
-
     /**
      * Reverse the migrations.
+     * 
      */
     public function down(): void
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('comments');
     }
 };

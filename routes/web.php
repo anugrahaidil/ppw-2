@@ -1,6 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
+
+Route::get('/posts/{post}/comments', [CommentController::class, 'index']);
+
+Route::resource('posts.comments', CommentController::class);
+
+
+// use App\Http\Controllers\CommentController;
+
+// Route::get('/posts/{post}/comments', [CommentController::class, 'index'])->name('comments.index');
+// Route::post('/posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
+
 
 Route::get('/', function () {
     return view('welcome');

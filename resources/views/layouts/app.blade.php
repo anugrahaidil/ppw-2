@@ -1,32 +1,26 @@
+<!-- resources/views/layouts/app.blade.php -->
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset=""UTF-8>
-        <meta http-equiv="X-UA-compatible" content="IE=edge">
-        {{-- <meta name="wiewport" content="width-device-width, initial-scale"> --}}
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <style>
-            #footer{
-                width: 100%;
-                height: auto;
-                padding-top: 20px;
-                padding-bottom: 20px;
-                background-color: gray;
-                color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">My Blog</a>
         </div>
+    </nav>
+
+    <main class="py-4">
         @yield('content')
-        <div id="footer">
-            <h1>INI FOOTER</h1>
-        </div>
-        <script src="{{asset('js/script.js')}}"></script>
-    </body>
+    </main>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 My Laravel Blog</p>
+    </footer>
+</body>
 </html>

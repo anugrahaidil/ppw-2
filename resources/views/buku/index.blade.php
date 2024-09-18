@@ -6,6 +6,7 @@
     <title>Buku</title>
 </head>
 <body>
+<h1>Daftar Buku</h1>
 <table class="table table-stripped">
     <thead>
         <tr>
@@ -28,5 +29,8 @@
             </tr>
         @endforeach
     </tbody>
+</table>
+<p>Total Buku: {{ $jumlah_buku }}</p>
+<p>Total Harga Semua Buku: Rp {{ number_format($total_harga, 0, ',', '.') }}</p>
 </body>
 </head>

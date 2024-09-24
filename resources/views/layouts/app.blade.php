@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">My Blog</a>
+            <a class="navbar-brand" href="/">Latihan Laravel</a>
         </div>
     </nav>
 
@@ -20,7 +20,7 @@
     </main>
 
     <footer class="text-center mt-5">
-        <p>&copy; 2024 My Laravel Blog</p>
+        <p>&copy; 2024 Laravel - Anugrah Aidil Fitri</p>
     </footer>
 </body>
 </html>
